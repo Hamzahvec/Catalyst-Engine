@@ -1,0 +1,22 @@
+{% include 'header.html' %}
+<body data-bs-theme="dark" class="hero-section container" style="height: 100vh;">
+{% include 'navbar.html' %}
+<div class="container">
+    <div class="col-lg-6">
+        <div class="rounded-3 card mx-4 my-4 py-3 px-3">
+            <form method="post">
+                {{ form.name() }}
+                {{ form.email() }}
+                {{ form.phone_no() }}
+                {{ form.message() }}
+                {{ form.submit() }}
+            </form>
+
+            {{ ckeditor.load() }}
+            {{ ckeditor.config(name='body') }}
+        </div>
+    </div>
+</div>
+</body>
+{% include 'footer.html' %}
+

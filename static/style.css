@@ -1,0 +1,70 @@
+/* Reset default margins */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 1. Overlay the navbar */
+.navbar {
+  position: fixed; /* Changes to 'fixed' if you want it to follow scrolling */
+  top: 0;
+  left: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: transparent; /* Makes background invisible */
+  z-index: 10; /* Ensures navbar sits on top of the background image */
+}
+
+/* Style the links so they are visible against the dark background */
+.nav-links li a, .logo {
+  color: black;
+  text-decoration: none;
+}
+
+/* 2. The main page background */
+.hero-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("/static/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+center {
+    align: center;
+}
+
+p, .text {
+    font-family: 'Roboto Slab', serif;
+}
+
+.heading1 {
+    font-family: 'Black Ops One', sans-serif;
+}
+
+.heading2 {
+    font-family: 'DM Sans', sans-serif;
+}
+
+.pricing-list {
+    align: left;
+}
+/* Base card transition setup */
+.pricing-card {
+    transition: box-shadow 0.25s ease-in-out, transform 0.25s ease-in-out;
+}
+
+/* Hover state override */
+.pricing-card:hover {
+    /* 1. Changed color to a subtle translucent white so it glows in dark mode */
+    /* 2. Added !important to smash past Bootstrap's 'shadow-sm' block */
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.15) !important;
+
+    /* Optional bonus: Lifts the card up slightly by 4 pixels on hover */
+    transform: translateY(-4px);
+}
+
