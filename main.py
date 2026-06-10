@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
-from flask_bootstrap import Bootstrap
+from flask_bootstrap import Bootstrap5
 from wtforms import StringField, EmailField, TelField, SubmitField
 from wtforms.validators import DataRequired
 from flask_ckeditor import CKEditor, CKEditorField
@@ -8,6 +8,7 @@ import os
 
 app = Flask(__name__)
 ckeditor = CKEditor(app)
+bootstrap = Bootstrap5(app)
 app.config['SECRET_KEY'] = os.environ.get("FLASK_KEY")
 
 class ContactForm(FlaskForm):
