@@ -4,10 +4,11 @@ from flask_bootstrap import Bootstrap
 from wtforms import StringField, EmailField, TelField, SubmitField
 from wtforms.validators import DataRequired
 from flask_ckeditor import CKEditor, CKEditorField
+import os
 
 app = Flask(__name__)
 ckeditor = CKEditor(app)
-app.config['SECRET_KEY'] = "8BYkEfBA6O6donzWlSihBXox7C0sKR6b"
+app.config['SECRET_KEY'] = os.environ.get("FLASK_KEY")
 
 class ContactForm(FlaskForm):
     name = StringField("Name", validators=[DataRequired()])
