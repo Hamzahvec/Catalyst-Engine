@@ -71,3 +71,25 @@ p, .text {
 .form-control {
     font-family: 'Roboto Slab', sans-serif !important;
 }
+
+.offer-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(124, 58, 237, 0.15);
+    border: 1px solid #7c3aed;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-size: 0.95rem;
+    margin: 20px auto;
+}
+
+.offer-badge {
+    background: #facc15;
+    color: #111;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+}
