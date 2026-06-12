@@ -37,7 +37,7 @@ def contact_page():
         clean_message = BeautifulSoup(form.message.data, "html.parser").get_text()
         webhook_url = "https://discordapp.com/api/webhooks/1514237780757053500/lpaQIwMxLGMYp78z9dGoKI58_1l9-Gi8cIaj4ThkSLHtSUOlsHMvlH8TsWxA3EZ0CCoS"
         payload = {
-            "content": f"🚀 **New Lead!**\n**Name:** {form.name.data}\n**Email:** {form.email.data}\n**Message:** {clean_message}"
+            "content": f"🚀 **New Lead!**\n**Name:** {form.name.data}\n**Email:** {form.email.data}\n**Phone Number: {form.phone_no.data}**\n**Message:** {clean_message}"
         }
         requests.post(webhook_url, json=payload)
     return render_template("contact.html", form=form)

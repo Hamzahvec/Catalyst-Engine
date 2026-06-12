@@ -21,8 +21,8 @@
             <img class="d-block" src="static/heading.png" alt="" width="250" height="60">
         </a></div>
         <ul class="nav col-12 col-md-auto mb-2 mb-md-0">
-            <li class="nav-item"><a class="nav-link active text" href="{{ url_for('pricing_plans') }}" style="{% if request.endpoint == 'pricing_plans' %}color: slateblue;{% endif %}">Pricing</a></li>
-            <li class="nav-item"><a class="nav-link active text" href="{{ url_for('contact_page') }}" aria-disabled="true" style="{% if request.endpoint == 'contact_page' %}color: slateblue;{% endif %}">Contact Us</a></li>
+            <li class="nav-item"><a class="nav-link active text btn btn-secondary" href="{{ url_for('pricing_plans') }}" style="{% if request.endpoint == 'pricing_plans' %}color: gold;{% endif %}">Pricing</a></li>
+            <li class="nav-item"><a class="nav-link active text" href="{{ url_for('contact_page') }}" aria-disabled="true" style="{% if request.endpoint == 'contact_page' %}color: gold;{% endif %}">Contact Us</a></li>
         </ul>
 
 </header>

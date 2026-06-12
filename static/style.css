@@ -68,3 +68,6 @@ p, .text {
     transform: translateY(-4px);
 }
 
+.form-control {
+    font-family: 'Roboto Slab', sans-serif !important;
+}
