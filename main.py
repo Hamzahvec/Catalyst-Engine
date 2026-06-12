@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
 from flask_bootstrap import Bootstrap5
-from wtforms import StringField, EmailField, TelField, SubmitField
+from wtforms import StringField, EmailField, TelField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired
 from flask_ckeditor import CKEditor, CKEditorField
 from bs4 import BeautifulSoup
@@ -19,7 +19,7 @@ class ContactForm(FlaskForm):
     name = StringField("Name", validators=[DataRequired()])
     email = EmailField("Email", validators=[DataRequired()])
     phone_no = TelField("Phone Number (Optional)")
-    message = CKEditorField("Your Message", validators=[DataRequired()])
+    message = TextAreaField("Your Message", validators=[DataRequired()])
     submit = SubmitField()
 
 @app.route("/")
